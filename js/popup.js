@@ -47,4 +47,6 @@ chrome.contextMenus.create({
   onclick: lastfm,
 });
 
- 
+chrome.browserAction.onClicked.addListener(function(tab) {
+    chrome.tabs.create({ url: "https://github.com/minasyanakk/youtube-Search" });
+});
