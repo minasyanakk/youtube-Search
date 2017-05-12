@@ -16,6 +16,12 @@ function link(info,tab) {
     url: "https://www.youtube.com",
   });           
 }
+function soudocould(info,tab) {
+  console.log("Word " + info.selectionText + " was clicked.");
+  chrome.tabs.create({  
+    url: "https://www.youtube.com",
+  });           
+}
 
 
 chrome.contextMenus.create({
@@ -27,6 +33,11 @@ chrome.contextMenus.create({
   title: "Поиск bandcamp: %s", 
   contexts:["selection"], 
   onclick: bandcamp,
+});
+chrome.contextMenus.create({
+  title: "Поиск soudocould: %s", 
+  contexts:["selection"], 
+  onclick: soudocould,
 });
 
 chrome.contextMenus.create({
