@@ -1,14 +1,14 @@
 {
-    "name": "youtube search",
+    "name": "Мое расширение",
     "version": "6.6.6",
     "manifest_version": 2,
-    "description": "Поиск по youtube",
+    "description": "поиск",
     "permissions": [
       "contextMenus"
      ],
-     "icons": { "16": "icon.ico",
-           "48": "48.png",
-          "128": "128.png" },
+     "icons": { "16": "1.png",
+           "48": "2.png",
+          "128": "3.png" },
     "background": { 
       "scripts": ["js/popup.js"]
     }
