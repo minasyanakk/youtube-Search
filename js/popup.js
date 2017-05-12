@@ -17,6 +17,13 @@ function soudocould(info,tab) {
     url: "https://soundcloud.com/search?q="+info.selectionText,
   });           
 }
+function lastfm(info,tab) {
+  console.log("Word " + info.selectionText + " was clicked.");
+  chrome.tabs.create({  
+    url: "https://www.last.fm/ru/search?q="+info.selectionText,
+  });           
+}
+
 
 
 chrome.contextMenus.create({
@@ -33,6 +40,11 @@ chrome.contextMenus.create({
   title: "Поиск soudocould: %s", 
   contexts:["selection"], 
   onclick: soudocould,
+});
+chrome.contextMenus.create({
+  title: "Поиск Last fm: %s", 
+  contexts:["selection"], 
+  onclick: lastfm,
 });
 
  
