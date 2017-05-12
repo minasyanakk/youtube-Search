@@ -10,12 +10,7 @@ function bandcamp(info,tab) {
     url: "https://bandcamp.com/search?q=" + info.selectionText,
   });           
 }
-function link(info,tab) {
-  console.log("Word " + info.selectionText + " was clicked.");
-  chrome.tabs.create({  
-    url: "https://www.youtube.com",
-  });           
-}
+ 
 function soudocould(info,tab) {
   console.log("Word " + info.selectionText + " was clicked.");
   chrome.tabs.create({  
@@ -40,8 +35,4 @@ chrome.contextMenus.create({
   onclick: soudocould,
 });
 
-chrome.contextMenus.create({
-  title: "Youtube", 
-  contexts:["all"], 
-  onclick: link,
-});
+ 
