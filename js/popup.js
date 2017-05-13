@@ -23,13 +23,23 @@ function lastfm(info,tab) {
     url: "https://www.last.fm/ru/search?q="+info.selectionText,
   });           
 }
-
+function yandex(info,tab) {
+  console.log("Word " + info.selectionText + " was clicked.");
+  chrome.tabs.create({  
+    url: "https://music.yandex.ua/search?text="+info.selectionText,
+  });           
+}
 
 
 chrome.contextMenus.create({
   title: "Поиск youtube: %s", 
   contexts:["selection"], 
   onclick: getword,
+});
+chrome.contextMenus.create({
+  title: "Поиск Яндекс Музыка: %s", 
+  contexts:["selection"], 
+  onclick: yandex,
 });
 chrome.contextMenus.create({
   title: "Поиск bandcamp: %s", 
